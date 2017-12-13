@@ -4,6 +4,12 @@
 Changes in Apach Libcloud in development
 ----------------------------------------
 
+Breaking
+~~~~~~~~
+
+- Drop support for Python 2.6 and 3.3, which are no longer supported
+  [Quentin Pradet]
+
 Common
 ~~~~~~
 
