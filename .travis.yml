@@ -46,14 +46,6 @@ matrix:
       # Trigger ReadTheDocs build on docs builder
       after_success:
         - ./contrib/trigger_rtd_build.py 8284
-  # For now allow failures of all the builds which use lxml
-  allow_failures:
-    - env: ENV=coverage
-    - env:
-      python: pypy3
-    - env:
-      python: pypy
-      # Trigger ReadTheDocs build
 
 install:
   - pip install --upgrade "pip==9.0.1"
