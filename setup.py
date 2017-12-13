@@ -36,7 +36,6 @@ libcloud.utils.SHOW_DEPRECATION_WARNING = False
 # installed / available
 PY2 = sys.version_info[0] == 2
 PY3 = sys.version_info[0] == 3
-PY2_pre_25 = PY2 and sys.version_info < (2, 5)
 PY2_pre_26 = PY2 and sys.version_info < (2, 6)
 PY2_pre_27 = PY2 and sys.version_info < (2, 7)
 PY2_pre_279 = PY2 and sys.version_info < (2, 7, 9)
@@ -72,7 +71,7 @@ if PY2_pre_27:
 else:
     unittest2_required = False
 
-if PY2_pre_25:
+if PY2_pre_26:
     version = '.'.join([str(x) for x in sys.version_info[:3]])
     print('Version ' + version + ' is not supported. Supported versions are ' +
           ', '.join(SUPPORTED_VERSIONS))
